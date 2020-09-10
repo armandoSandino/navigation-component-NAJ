@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="fragmentOne.title"> One fragment </string>
     <string name="fragmentTwo.title"> Two fragment </string>
+    <string name="fragmentThree.title"> Three fragment </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
