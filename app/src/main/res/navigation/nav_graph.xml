@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicio">
+
+    <fragment
+        android:id="@+id/inicio"
+        android:name="com.example.navigationcomponent.Inicio"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicio_to_one"
+            app:destination="@id/one" />
+        <action
+            android:id="@+id/action_inicio_to_two"
+            app:destination="@id/two" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/one"
+        android:name="com.example.navigationcomponent.UI.FRAGMENTS.One"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one" >
+        <action
+            android:id="@+id/action_one_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+    <fragment
+        android:id="@+id/two"
+        android:name="com.example.navigationcomponent.UI.FRAGMENTS.Two"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two" >
+        <action
+            android:id="@+id/action_two_to_inicio"
+            app:destination="@id/inicio" />
+        <action
+            android:id="@+id/action_two_to_three"
+            app:destination="@id/three" />
+    </fragment>
+    <fragment
+        android:id="@+id/three"
+        android:name="com.example.navigationcomponent.Three"
+        android:label="fragment_three"
+        tools:layout="@layout/fragment_three" >
+        <action
+            android:id="@+id/action_three_to_two"
+            app:destination="@id/two" />
+        <action
+            android:id="@+id/action_three_to_inicio"
+            app:destination="@id/inicio" />
+    </fragment>
+</navigation>
